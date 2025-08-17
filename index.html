@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JustBen - Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600;800&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+body { font-family: 'Roboto', sans-serif; background:#f2f2f2; color:#333; }
+a { text-decoration:none; color:inherit; }
+
+header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:60px 10%;
+  background: linear-gradient(135deg, #6c5ce7, #00b894);
+  color:white; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position:relative; overflow:hidden;
+}
+header h1 {
+  font-family:'Poppins', sans-serif;
+  font-size:4.5em; font-weight:800;
+  line-height:1;
+  animation:fadeInLeft 1s ease-out;
+}
+header .header-decor {
+  position:absolute; width:350px; height:350px; border-radius:50%;
+  background:rgba(255,255,255,0.15); top:-50px; right:-120px;
+  animation:float 6s ease-in-out infinite alternate;
+}
+header .profile-photo {
+  width:180px; height:180px; border-radius:50%;
+  border:6px solid white; object-fit:cover;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease;
+}
+header .profile-photo:hover { transform: scale(1.2) rotate(10deg); }
+
+@keyframes float {0%{transform:translateY(0) rotate(0deg);}100%{transform:translateY(30px) rotate(15deg);}}
+
+section { padding:100px 10%; position:relative; }
+#about {
+  background:#ffeaa7; border-radius:30px 0 30px 0;
+  box-shadow:10px 10px 30px rgba(0,0,0,0.1);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+  animation:fadeInUp 1.2s ease-out;
+}
+#about h2 { font-family:'Poppins', sans-serif; font-size:3em; margin-bottom:20px; color:#2d3436; }
+#about p { font-size:1.3em; line-height:1.9; margin-bottom:20px; }
+#about p span { font-weight:700; color:#6c5ce7; }
+
+#music {
+  display:flex; gap:50px; background:linear-gradient(to right,#81ecec,#74b9ff);
+  padding:120px 10%; border-radius:0 30px 0 30px; box-shadow:-10px 10px 30px rgba(0,0,0,0.1);
+  position:relative; animation:fadeInLeft 1.2s ease-out;
+}
+#music img { width:350px; height:350px; border-radius:30px; object-fit:cover;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2); transform:rotate(-5deg); transition:transform 0.5s ease; }
+#music img:hover { transform: rotate(0deg) scale(1.05); }
+#music div { flex:1; display:flex; flex-direction:column; justify-content:center; color:#2d3436; }
+#music h2 { font-family:'Poppins', sans-serif; font-size:2.8em; margin-bottom:20px; }
+#music p { font-size:1.2em; line-height:1.8; }
+
+#contact {
+  background:#2d3436; color:white; padding:120px 10%; border-radius:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2); display:flex; flex-direction:column; align-items:center;
+  text-align:center; animation:fadeIn 1.5s ease-out;
+}
+.contact-links { margin-top:30px; display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+.contact-link { padding:15px 30px; background:rgba(255,255,255,0.2); border-radius:20px;
+  font-weight:bold; transition:all 0.3s ease; }
+.contact-link:hover { background:white; color:#2d3436; transform:translateY(-5px) scale(1.1); }
+
+/* Animations */
+@keyframes fadeInDown {0%{opacity:0; transform: translateY(-50px);}100%{opacity:1; transform: translateY(0);}}
+@keyframes fadeInLeft {0%{opacity:0; transform: translateX(-50px);}100%{opacity:1; transform: translateX(0);}}
+@keyframes fadeInUp {0%{opacity:0; transform: translateY(50px);}100%{opacity:1; transform: translateY(0);}}
+@keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+
+/* Responsive */
+@media (max-width:1024px) { #music{flex-direction:column;align-items:center;} #music img{width:80%;height:auto;margin-bottom:30px;} header{flex-direction:column;align-items:flex-start;} header .profile-photo{margin-top:20px;} }
+@media (max-width:600px) { header h1{font-size:3em;} #about h2,#music h2{font-size:2em;} }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Beni</h1>
+  <img class="profile-photo" src="ig.jpg" alt="JustBen Photo">
+  <div class="header-decor"></div>
+</header>
+
+<section id="about">
+<h2>About Me</h2>
+<p>Hello! My name is <span>beni</span>. I am a passionate <span>web developer</span> who thrives on creating unique, interactive, and modern websites. My expertise includes <span>HTML</span>, <span>CSS</span>, and <span>JavaScript</span>, and I enjoy building dynamic interfaces with frameworks like <span>Vue.js</span>.</p>
+<p>I am always exploring new technologies and techniques to improve my skills. Currently, I am working on multiple projects that challenge my creativity, problem-solving, and design thinking. I believe that <span>code</span> and <span>music</span> share the same rhythm, and my experience as a musician fuels my development creativity.</p>
+<p>My mission is to craft visually appealing and interactive experiences that not only function flawlessly but also inspire users.</p>
+</section>
+
+<section id="music">
+<img src="ig1.jpg" alt="Music Image">
+<div>
+<h2>Music</h2>
+<p>Music is my second language. I play <span>piano, drums, and guitar</span>, specializing in <span>solo guitar</span>. Music teaches patience, creativity, and discipline, which translates directly into my coding process.</p>
+<p>Through music, I learn to understand structure, rhythm, and patterns — all crucial skills for programming. Whether composing or performing, I bring the same attention to detail and creativity into every project I code.</p>
+<p>Combining my skills as a developer and musician, I aim to create experiences that are both functional and immersive.</p>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<p>Feel free to reach out to discuss projects, collaborations, or just to connect!</p>
+<p>Email: <a href="mailto:your.email@example.com" style="color:white;">your.email@example.com</a></p>
+<div class="contact-links">
+<a class="contact-link" href="https://instagram.com/justben.music" target="_blank">Instagram</a>
+<a class="contact-link" href="https://www.tiktok.com/@just_beni00" target="_blank">TikTok</a>
+<a class="contact-link" href="https://wa.me/250737153929" target="_blank">WhatsApp</a>
+ <a class="contact-link" href="https://Github.com/mr-beni0" target="_blank">Github</a>
+</div>
+</section>
+
+</body>
+</html>
